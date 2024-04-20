@@ -1,0 +1,113 @@
+Problem 1
+
+a) Navigate and List
+Navigate to your home directory:
+ => cd 
+List its contents:
+ => ls
+create "Linux assignment"
+ => mkdir Linuxassignment
+Move into the "LinuxAssignment" directory:
+ => cd Linuxassignment
+
+
+b) File Management:
+Create a new file named "file1.txt":
+  => touch file1.txt
+Display the contents of "file1.txt"
+  =>cat file1.txt
+
+
+c) Directory Management:
+To create a new directory named "docs" inside the "LinuxAssignment" directory
+  => mkdir docs
+
+
+d) Copy and Move Files:
+To copy the "file.txt" into the "docs" directory and rename it to "file2.txt,"
+  =>cp file1.txt docs/file2.txt
+
+
+e) Permissions and Ownership:
+To change the permissions of "file2.txt" as described and then change the owner to the current user
+  =>chmod 744 docs/file2.txt
+  =>chown $USER docs/file2.txt
+This command sets read (4), write (2), and execute (1) permissions for the owner and read (4) permissions for others.
+
+f) Final Checklist:
+List the contents of the "LinuxAssignment" directory:
+ =>ls
+
+g) File Searching:
+To find all files with the ".txt" extension in the current directory and its subdirectories,
+ =>find *.txt"
+
+
+To display lines containing a specific word in a file,
+ =>grep "specific_word" filename.txt
+
+h) System Information:
+To display the current system date and time
+ =>date
+
+
+i) Networking:
+To display the IP address
+ =>ip addr
+
+Ping a remote server to check connectivity
+
+j) File Compression:
+
+To compress the "docs" directory into a zip file
+ =>zip -r docs.zip docs
+Now, to extract the contents of the zip file into a new directory
+ =>unzip docs.zip -d extracted_docs
+
+
+k) File Editing:
+To open and edit "file1.txt" in a text editor
+ =>vi file1.txt
+ =>cat file1.txt
+Replace a specific word in the "file1.txt" file with another word
+ =>sed -i 's/how/hello/g' file1.txt
+ =>cat file1.txt
+
+
+Problem 2
+
+a)Suppose you have a file named "data.txt" containing important information. Display the 
+first 10 lines of this file to quickly glance at its contents using a command.
+=>head -n 10 data.txt
+
+b)Now, to check the end of the file for any recent additions, display the last 5 lines of 
+"data.txt" using another command
+=>tail -n 5 data.txt
+
+
+c)In a file named "numbers.txt," there are a series of numbers. Display the first 15 lines of 
+this file to analyze the initial data set.
+=>head -n 15 numbers.txt
+
+
+d)To focus on the last few numbers of the dataset, display the last 3 lines of "numbers.txt"
+=>tail -n 3 numbers.txt
+
+
+e)Imagine you have a file named "input.txt" with text content. Use a command to translate 
+all lowercase letters to uppercase in "input.txt" and save the modified text in a new file 
+named "output.txt." 
+=>tr 'a-z' 'A-Z' < input.txt > output.txt
+
+f)In a file named "duplicate.txt," there are several lines of text, some of which are 
+duplicates. Use a command to display only the unique lines from "duplicate.txt." 
+=>uniq duplicate.txt
+
+
+
+g)In a file named "fruit.txt," there is a list of fruits, but some fruits are repeated. Use a 
+command to display each unique fruit along with the count of its occurrences in 
+"fruit.txt." 
+=>sort fruit.txt | uniq -c
+
+ 
